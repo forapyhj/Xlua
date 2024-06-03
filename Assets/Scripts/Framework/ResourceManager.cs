@@ -67,15 +67,36 @@ public class ResourceManager : MonoBehaviour
             action.Invoke(bundleRequest.asset);
     }
 
-    public void LoadAssets(string assetsName,Action<UnityEngine.Object> action )
+    private void LoadAssets(string assetsName,Action<UnityEngine.Object> action )
     {
         StartCoroutine(LoadBundleAsync(assetsName,action));
+    }
+
+    public void LoadUI(string assetName,Action<UnityEngine.Object> action =null)
+    {
+        LoadAssets(PathUtil.GetUIPath(assetName), action);
+    }
+    public void LoadMusic(string assetName, Action<UnityEngine.Object> action = null)
+    {
+        LoadAssets(PathUtil.GetMusicPath(assetName), action);
+    }
+    public void LoadSound(string assetName, Action<UnityEngine.Object> action = null)
+    {
+        LoadAssets(PathUtil.GetSoundPath(assetName), action);
+    }
+    public void LoadEffect(string assetName, Action<UnityEngine.Object> action = null)
+    {
+        LoadAssets(PathUtil.GetEffectPath(assetName), action);
+    }
+    public void LoadScene(string assetName, Action<UnityEngine.Object> action = null)
+    {
+        LoadAssets(PathUtil.GetScenePath(assetName), action);
     }
 
     void Start()
     {
         ParseVersionFile();
-        LoadAssets("Assets/BuildResources/UI/Prefabs/BgUI.prefab", OnComplete);
+        LoadUI("BgUI", OnComplete);
     }
 
     private void OnComplete(UnityEngine.Object obj)
