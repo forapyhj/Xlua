@@ -1,15 +1,17 @@
 ManifestFileVersion: 0
-CRC: 253528590
+CRC: 4133299669
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 26343202187cfa78aef959af4e8f4aaf
+    Hash: 78673939f4a2b13ddff7dc9242718960
   TypeTreeHash:
     serializedVersion: 2
-    Hash: f19fbf085e00d23fbc8d6cf7b345590b
+    Hash: ea5a42e0fd8ea905efa7aa926a3b8944
 HashAppended: 0
 ClassTypes:
 - Class: 28
+  Script: {instanceID: 0}
+- Class: 213
   Script: {instanceID: 0}
 Assets:
 - Assets/BuildResources/UI/Resources/slider_handle.png

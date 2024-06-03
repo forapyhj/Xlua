@@ -1,5 +1,5 @@
 ManifestFileVersion: 0
-CRC: 1941633927
+CRC: 1580782922
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
@@ -17,3 +17,8 @@ AssetBundleManifest:
     Info_4:
       Name: ui/resources/universal_panel_40.png.ab
       Dependencies: {}
+    Info_5:
+      Name: ui/prefabs/bgui.prefab.ab
+      Dependencies:
+        Dependency_0: ui/resources/background.png.ab
+        Dependency_1: ui/resources/button_150.png.ab
